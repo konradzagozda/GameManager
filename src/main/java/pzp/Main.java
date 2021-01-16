@@ -1,5 +1,6 @@
 package pzp;
 
+import java.util.Locale;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,9 +15,21 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/managerView.fxml"));
+        Settings settings = new Settings();
+        settings.setLang(new Locale("en"));
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/managerView.fxml"));   
+        loader.setResources(settings.getBundle());
+        Parent root = loader.load();
+        
+        ManagerViewController controller = loader.getController();
+        controller.changeSettings(settings);
+        
         primaryStage.setTitle("GameManager");
-        primaryStage.setScene(new Scene(root, 600, 600));
+        Scene scene = new Scene(root, 600, 600);
+        scene.getStylesheets().add(settings.getThemePath());
+        scene.getStylesheets().add(settings.getFontPath());
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 }

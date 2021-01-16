@@ -1,0 +1,8 @@
+.root {
+    -fx-font-family: 'Trebuchet MS', sans-serif;
+    -fx-accent: #eec8e3;
+    -fx-base: #f286d4;
+    -fx-background: #eda5d6;
+    -fx-focus-color: #cd74cd;
+}
+
