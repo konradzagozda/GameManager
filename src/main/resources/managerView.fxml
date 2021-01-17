@@ -36,9 +36,8 @@
       </Label>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0" GridPane.columnSpan="2" GridPane.rowIndex="2" GridPane.rowSpan="2">
          <children>
-            <Button mnemonicParsing="false" text="%man.ttt" />
-            <Button mnemonicParsing="false" text="%man.bmn" />
-            <Button mnemonicParsing="false" text="%man.checkers" />
+            <Button mnemonicParsing="false" onAction="#runTicTacToe" text="%man.ttt" />
+            <Button mnemonicParsing="false" onAction="#runRPS" text="%man.rps" />
          </children>
       </HBox>
    </children>

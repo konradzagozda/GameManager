@@ -11,6 +11,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import pzp.rps.RPS;
+import pzp.tictactoe.TicTacToe;
 
 public class ManagerViewController implements Initializable {
     private Settings settings;
@@ -50,5 +52,14 @@ public class ManagerViewController implements Initializable {
     public void changeSettings(Settings settings) {
         this.settings = settings;
     }
-    
+
+    public void runTicTacToe(ActionEvent actionEvent) throws Exception {
+        var ttt = new TicTacToe();
+        ttt.start(new Stage());
+    }
+
+    public void runRPS(ActionEvent actionEvent) throws Exception {
+        var rps = new RPS();
+        rps.start(new Stage());
+    }
 }
