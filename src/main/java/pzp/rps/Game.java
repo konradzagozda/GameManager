@@ -21,7 +21,7 @@ public class Game {
             return  "You made scissors, and the system made rocks. You lost.";
         }
         else if(user==2 && number==0){
-            return "You are cloth, the system is stones, you win.";
+            return "You are paper, the system is stones, you win.";
         }
         else if(user==0 && number==1){
             return  "You got rocks, and the system got scissors. You won.";
@@ -30,16 +30,16 @@ public class Game {
             return "You are a stone, the system is a stone, and the two sides are tied.";
         }
         else if(user==2 && number==1){
-            return "You got cloth, and the system got scissors. You lost.";
+            return "You got paper, and the system got scissors. You lost.";
         }
         else if(user==0 && number==2){
-            return "You are the stone, the system is the cloth, you lose.";
+            return "You are the stone, the system is the paper, you lose.";
         }
         else if(user==1 && number==2){
             return "You got scissors, and the system got cloth. You won.";
         }
         else{
-            return "You have cloth, and the system has cloth. The two sides draw.";
+            return "You have paper, and the system has paper. The two sides draw.";
         }
     }
 

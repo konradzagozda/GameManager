@@ -22,11 +22,6 @@ import java.awt.*;
 public class RPS extends Application {
 
     Lablepane lablepane=new Lablepane();
-//    String str1;
-//
-//    public void setStr1(String str1) {
-//        this.str1 = str1;
-//    }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -37,18 +32,18 @@ public class RPS extends Application {
         Label label = new Label("Start the game:");
         label.setFont(Font.font("Times New Roman", FontWeight.BOLD, FontPosture.ITALIC, 30));
         pane.add(label, 0, 0);
-        //cloth
-        Image image1 = new Image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRRLit7r5NohVFCe38GaOdvlNlkqAMWPKR6A&usqp=CAU");
+        //paper
+        Image image1 = new Image("images/paper.png");
         ImageView imageView1 = new ImageView(image1);
         imageView1.setFitHeight(150);
         imageView1.setFitWidth(150);
         pane.add(imageView1, 0, 1);
         Image1HanderClass image1HanderClass = new Image1HanderClass();
-        Button btOK1 = new Button("cloth");
+        Button btOK1 = new Button("paper");
         pane.add(btOK1, 0, 2);
         btOK1.setOnAction(image1HanderClass);
         //stone
-        Image image2 = new Image("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1419901674,657140521&fm=27&gp=0.jpg");
+        Image image2 = new Image("images/rock.png");
         ImageView imageView2 = new ImageView(image2);
         imageView2.setFitHeight(150);
         imageView2.setFitWidth(150);
@@ -58,7 +53,7 @@ public class RPS extends Application {
         pane.add(btOK2, 1, 2);
         btOK2.setOnAction(image2HanderClass);
         //scissors
-        Image image3 = new Image("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2460250897,3788214935&fm=27&gp=0.jpg");
+        Image image3 = new Image("images/scissors.png");
         ImageView imageView3 = new ImageView(image3);
         imageView3.setFitHeight(150);
         imageView3.setFitWidth(150);
@@ -74,11 +69,6 @@ public class RPS extends Application {
         borderPane.setBottom(lablepane);
         BorderPane.setAlignment(pane,Pos.CENTER);
 
-
-//        game over
-//        Label label1 = new Label("111");
-//        label1.setFont(Font.font("Times New Roman", FontWeight.BOLD, FontPosture.ITALIC, 30));
-//        pane.add(label1, 0, 3);
 
         pane.setStyle("-fx-background-color: #0effb8");
 

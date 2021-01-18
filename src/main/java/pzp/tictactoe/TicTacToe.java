@@ -434,10 +434,10 @@ class Square {
 
 class SquareSkin extends StackPane {
   static final Image noughtImage = new Image(
-      "http://icons.iconarchive.com/icons/double-j-design/origami-colored-pencil/128/green-cd-icon.png"
+      "images/ought.png"
   );
   static final Image crossImage = new Image(
-      "http://icons.iconarchive.com/icons/double-j-design/origami-colored-pencil/128/blue-cross-icon.png"
+      "images/cross.png"
   );
 
   private final ImageView imageView = new ImageView();
