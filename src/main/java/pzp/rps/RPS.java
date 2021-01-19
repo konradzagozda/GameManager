@@ -81,12 +81,11 @@ public class RPS extends Application {
 
     class Image1HanderClass implements EventHandler<ActionEvent> {
 
-        //Cloth 2
+        //Paper 2
         @Override
         public void handle(ActionEvent event) {
             Game game = new Game();
             String str = game.playgame(2);
-            //setStr1(str);
             lablepane.show(str);
             System.out.println(str);
 
